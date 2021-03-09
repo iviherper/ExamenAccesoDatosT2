@@ -24,10 +24,12 @@ public class ClasePrincipal {
 				{
 				pro = r.exec(comando);
 				} catch (Exception e) {}
-				
-				
 				break;
 			case EntradaSalida.VOLCARDATOS:
+				ArrayList<Palabra> palabrass = AccesoaBD.sacarPalabras();
+				for (Palabra palabra2 : palabrass) {
+					AccesoaBD.guardarHibernate(palabra2);
+				}
 				break;
 			case EntradaSalida.SALIR:
 				continu=false;
