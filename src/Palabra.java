@@ -38,6 +38,12 @@ public class Palabra {
 		this.imagen = imagen;
 	}
 	
+	public Palabra(String nombre, String definicion, String imagen) {
+		super();
+		this.nombre = nombre;
+		this.definicion = definicion;
+		this.imagen = imagen;
+	}
 	@Override
 	public String toString() {
 		return "Palabra [nombre=" + nombre + ", definicion=" + definicion + ", imagen=" + imagen + "]";
