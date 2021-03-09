@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class ClasePrincipal {
 
@@ -13,6 +14,18 @@ public class ClasePrincipal {
 				AccesoaBD.guardarPalabraMongo(p);
 				break;
 			case EntradaSalida.LISTARPALABRAS:
+				ArrayList<Palabra> palabras = AccesoaBD.sacarPalabras();
+				String tabla = PintarHTML.crearHTML(palabras);
+				AccesoFichero.crearFichero(tabla);
+				Runtime r = Runtime.getRuntime();
+				Process pro = null;
+				String comando[] = {"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe","C:\\Users\\Ivi\\Desktop\\palabras.html"};
+				try
+				{
+				pro = r.exec(comando);
+				} catch (Exception e) {}
+				
+				
 				break;
 			case EntradaSalida.VOLCARDATOS:
 				break;

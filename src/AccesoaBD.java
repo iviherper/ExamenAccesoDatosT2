@@ -18,8 +18,8 @@ public class AccesoaBD {
 			palabras.insert(objeto);
 		}
 		
-		public static List<Palabra> sacarPalabras() {
-			List<Palabra> listaPalabras = new ArrayList<Palabra>();
+		public static ArrayList<Palabra> sacarPalabras() {
+			ArrayList<Palabra> listaPalabras = new ArrayList<Palabra>();
 			Iterable<DBObject> cursor = palabras.find();
 			
 			for(DBObject dbobject : cursor) {
