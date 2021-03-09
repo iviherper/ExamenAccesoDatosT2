@@ -18,4 +18,10 @@ public class EntradaSalida {
 		return opcion;
 	}
 
+	public static String pedirPalabra() {
+		System.out.println("Introduce la palabra que deseas buscar");
+		String palabra = sc.nextLine();
+		return palabra;
+	}
+
 }

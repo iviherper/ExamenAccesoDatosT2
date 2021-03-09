@@ -7,7 +7,7 @@ public class ClasePrincipal {
 			int opcion = EntradaSalida.pedirOpcion();
 			switch (opcion) {
 			case EntradaSalida.BUSCARPALABRA:
-				
+				String palabra = EntradaSalida.pedirPalabra();
 				break;
 			case EntradaSalida.LISTARPALABRAS:
 				break;
