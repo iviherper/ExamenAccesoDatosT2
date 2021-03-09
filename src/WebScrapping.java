@@ -18,7 +18,7 @@ public class WebScrapping {
 			Elements def = definicion.getElementsByClass("j");
 			Elements img = imagen.getElementsByClass("rg_i Q4LuWd");
 			p.setDefinicion(def.get(0).text());
-			p.setImagen(img.get(0).absUrl("src"));
+			p.setImagen(img.get(img.size()-1).absUrl("data-src"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
