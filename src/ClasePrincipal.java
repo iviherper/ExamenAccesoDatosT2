@@ -8,6 +8,9 @@ public class ClasePrincipal {
 			switch (opcion) {
 			case EntradaSalida.BUSCARPALABRA:
 				String palabra = EntradaSalida.pedirPalabra();
+				Palabra p = WebScrapping.buscarPalabra(palabra);
+				System.out.println(p);
+//				AccesoaBD.guardarPalabraMongo(p);
 				break;
 			case EntradaSalida.LISTARPALABRAS:
 				break;

@@ -8,6 +8,7 @@ import org.hibernate.annotations.Entity;
 public class Palabra {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
 	private String nombre;
 	private String definicion;
 	private String imagen;
@@ -16,6 +17,13 @@ public class Palabra {
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getDefinicion() {
 		return definicion;
@@ -29,6 +37,7 @@ public class Palabra {
 	public void setImagen(String imagen) {
 		this.imagen = imagen;
 	}
+	
 	@Override
 	public String toString() {
 		return "Palabra [nombre=" + nombre + ", definicion=" + definicion + ", imagen=" + imagen + "]";
@@ -36,8 +45,9 @@ public class Palabra {
 	public Palabra() {
 		super();
 	}
-	public Palabra(String nombre, String definicion, String imagen) {
+	public Palabra(String nombre, String definicion, String imagen, int id) {
 		super();
+		this.id = id;
 		this.nombre = nombre;
 		this.definicion = definicion;
 		this.imagen = imagen;
